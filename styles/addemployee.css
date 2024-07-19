@@ -1,0 +1,160 @@
+label {
+  font-size: 15px;
+  margin: 10px 0px;
+  font-weight: 400;
+  opacity: 90%;
+}
+input[type="file"] {
+    display: none;
+}
+.add-employee-container input {
+  padding: 2%;
+  height: 2rem;
+  border: none;
+  outline: 2px solid #e0e4e4;
+  border-radius: 2px;
+  width: fit-content;
+}
+
+input:focus {
+  outline: 2px solid #509cfc;
+}
+
+.add-employee-container h1 {
+  margin-top: 2%;
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+
+.add-employee-container {
+  margin-top: 2vh;
+}
+
+.default-profile-photo {
+  width: 3.5rem;
+  height: 3.5rem;
+  justify-content: center;
+  background-color: #c8c9ca;
+  border-radius: 50%;
+  margin: 0.5rem 0;
+}
+
+.upload-profile-pic-btn {
+  padding: 0.5% 0.7%;
+  margin-left: 1.5rem;
+  background-color: #f44848;
+  border-radius: 0.2rem;
+  outline: none;
+  border: none;
+  color: white;
+}
+.upload-profile-pic-btn:hover {
+  cursor: pointer;
+}
+
+.default-profile-photo img {
+  height: 85%;
+}
+
+.input-field-container input::placeholder {
+  color: #8792a4;
+}
+.input-field-container input:focus {
+  outline-color: #4c9aff;
+}
+
+.add-employee-container h2 {
+  /* font-weight: normal; */
+  font-size: 1rem;
+}
+
+.add-employee-container.active {
+  margin: 0 1rem 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  color: black;
+}
+
+.profile-image-container {
+  align-items: center;
+  height: 100%;
+}
+
+.profile-image-container input {
+  position: absolute;
+  opacity: 100%;
+  width: 140px;
+}
+
+.employee-form-profile-details {
+  width: 100%;
+}
+
+.employee-form-profile-details input {
+  width: 15rem;
+}
+
+.employment-information-container select {
+  width: 24rem;
+  margin: 2% 0%;
+  padding-left: 2%;
+  height: 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  background-color: #f4f5f7;
+}
+
+.employment-information-container input {
+  height: 2.5rem;
+  width: 24rem;
+}
+
+.input-field-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 1.5rem 0 0;
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  justify-content: flex-end;
+}
+
+.error-message {
+  height: 0.8rem;
+  color: red;
+  font-size: 0.8rem;
+}
+
+.form-buttons {
+  margin-top: 1.5rem;
+}
+
+.form-buttons button {
+  cursor: pointer;
+  border: none;
+  margin-right: 1rem;
+  font-size: 0.8rem;
+  background-color: #fde6e6;
+  padding: 0.5rem;
+  color: #f44848;
+  width: 15%;
+  border-radius: 0.4rem;
+  text-align: center;
+}
+
+.form-buttons > :last-child {
+  background-color: #f44848;
+  color: white;
+}
+/* .form-buttons button:hover {
+    background-color: #f44848;
+    color: white;
+} */
+.employment-information-container {
+  margin-top: 2vh;
+}

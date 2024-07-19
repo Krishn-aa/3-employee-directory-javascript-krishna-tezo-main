@@ -1,0 +1,193 @@
+html,
+body {
+  overflow: hidden;
+  height: 100%;
+  min-height: 100%;
+}
+.page-header-btn-add-role {
+  display: flex;
+  justify-content: center;
+  gap: 6%;
+  background-color: #f44848;
+  border: none;
+  color: white;
+  border-radius: 0.5rem;
+  align-items: center;
+  width: 10rem;
+  height: 2.6rem;
+}
+
+.roles-card-section {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  overflow: scroll;
+  height: calc(90% - 230px);
+  overflow-x: hidden;
+  border: 2px solid #e0dcdc;
+  border-radius: 5px;
+  padding: 0.5%;
+}
+
+.roles-card {
+  height: 13rem;
+}
+
+.roles-card-section::-webkit-scrollbar {
+  width: 3px;
+  color: red;
+}
+
+.roles-card-section::-webkit-scrollbar-track {
+  background: transparent;
+}
+.roles-card-section::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10%;
+}
+
+.roles-card {
+  padding: 2% 5%;
+  border: 2px solid #e0dcdc;
+  border-radius: 5px;
+}
+
+.roles-card > div {
+  margin: 1rem;
+}
+
+.roles-card-header {
+  margin-top: 8%;
+  justify-content: space-between;
+}
+
+.roles-card-header button {
+  background-color: white;
+  border: none;
+}
+
+.roles-card-header-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  font-family: sans-serif;
+}
+
+.roles-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.roles-card-content > div {
+  margin: 1.5% 0%;
+}
+
+.roles-card-content p {
+  color: #4c5c72;
+  font-weight: 500;
+  opacity: 90%;
+}
+
+.roles-card-content-div {
+  position: relative;
+  justify-content: space-between;
+}
+
+.roles-card-bottom {
+  justify-content: flex-end;
+}
+
+.roles-card-bottom button {
+  background-color: white;
+  border: none;
+}
+
+.roles-card-bottom p {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  margin-right: 1rem;
+  opacity: 80%;
+}
+
+.roles-card-total-employees-card {
+  position: absolute;
+  right: 23%;
+  top: -15%;
+}
+
+.profile-img {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.profile-img-1 {
+  left: 0px;
+}
+
+.profile-img-2 {
+  left: 10px;
+}
+
+.profile-img-3 {
+  left: 20px;
+}
+
+.profile-img-4 {
+  left: 30px;
+}
+
+.profile-remaining-count {
+  justify-content: center;
+  position: absolute;
+  left: 40px;
+  font-size: 0.45rem;
+  background-color: rgb(245, 245, 245);
+  border-radius: 50%;
+  border: 1px solid white;
+  color: gray;
+  font-weight: 800;
+  opacity: 100%;
+  width: 25px;
+  height: 25px;
+}
+
+.add-role-page {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Add roles buttons */
+
+.add-role-buttons {
+  position: absolute;
+  right: 0%;
+  bottom: 10%;
+}
+
+.add-role-btn {
+  margin: 20px;
+  width: 130px;
+  opacity: 80%;
+  background-color: white;
+  font-weight: 500;
+  color: #4c5c72;
+  padding: 8px 14px;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+.add-role-btn {
+  color: white;
+  background-color: red;
+  cursor: pointer;
+}
+
+.cancel-btn {
+  border: none;
+  background-color: #ffc4c4;
+  color: red;
+}

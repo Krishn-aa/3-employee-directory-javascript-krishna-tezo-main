@@ -1,0 +1,227 @@
+/* Filter */
+
+.filter {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1%;
+    
+}
+
+.filter-icon {
+  margin: 3px 10px;
+}
+
+.filter-alphabets {
+  width: 97%;
+  justify-content: space-between;
+}
+
+.filter-alphabets div {
+
+  padding: 1% 1%;
+  background-color: rgb(234, 235, 238);
+  border-radius: 5px;
+  opacity: 50%;
+  font-weight: 500;
+  border: none;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+}
+
+.filter-alphabets div:hover {
+  cursor: pointer;
+  background-color: #f44848;
+  opacity: 100%;
+  color: white;
+}
+
+.filter-alphabets div.active{
+  background-color: red;
+  opacity: 100%;
+  color: white;
+}
+
+@media only screen and (min-width:768px){
+  
+} 
+
+/* Employee Table */
+.employee-table-section {
+  margin: 1.5% 0%;
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.205);
+  border-radius: 10px;
+}
+
+.employee-table-section-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.3% 2%;
+}
+
+.employee-table-section-header-del {
+  width: 100%;
+  height: 3rem;
+}
+
+.btn-delete {
+  display: none;
+  margin: 10px;
+  padding: 1% 2%;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  background-color: #ff9494;
+}
+
+.btn-delete:hover {
+  background-color: #f44848;
+}
+
+.employee-rows-section {
+  height: calc(100vh - 450px);
+  overflow-y: auto;
+}
+
+.employee-table {
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  border-collapse: collapse;
+}
+
+.employee-table-row th,
+.employee-table-row td {
+  white-space: nowrap;
+  padding: 10px 20px;
+}
+
+.employee-table-row {
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-left: none;
+  border-right: none;
+}
+
+.employee-rows-section::-webkit-scrollbar {
+  height: 3px;
+  width: 3px;
+  color: red;
+}
+
+.employee-rows-section::-webkit-scrollbar-track {
+  background: transparent;
+  margin-top: 3.125rem;
+}
+
+.employee-rows-section::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+  display: flex;
+}
+
+.employee-table thead{
+  position: sticky;
+  top: 0;
+  font-size: 0.8rem;
+  font-weight: 100;
+  opacity: 100%;
+  height: 3.125rem;
+  text-align: left;
+  background-color: rgba(250,250,252,1);
+  z-index: 2;
+  box-shadow:0 -1px #ccc,0 1px #ccc;
+}
+
+
+.table-user img {
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+
+.employee-table-row input {
+  scale: 1.4;
+}
+
+.table-user {
+  display: flex;
+}
+
+.user-profile-name,
+.user-profile-email{
+  font-weight: 500;
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+  opacity: 100%;
+  color: #415682;
+}
+
+.table-user img {
+  width: 36px;
+  height: 36px;
+}
+
+.user-profile-email {
+  font-size: 0.9rem;
+  color: #5b6883;
+  opacity: 90%;
+}
+
+.status-btn {
+  padding: 7.5% 15%;
+  border: none;
+  border-radius: 5px;
+  color: green;
+  background-color: #e4f8e8;
+}
+
+.status-btn.inactive{
+  background-color:#ff9494;
+  color: black; 
+}
+
+.employee-table-row:hover {
+  background-color: #fff4f4;
+  cursor: pointer;
+  border-radius: 25px;
+}
+
+/* Ellipsis */
+.ellipsis{
+  position: relative;
+}
+.ellipsis:hover{
+  font-weight: 900;
+  cursor: pointer;
+}
+.ellipsis-menu{
+  z-index: 2;
+  height: 0px;
+  overflow: hidden;
+  position: absolute;
+  right: 24px;
+  margin-top: 15px 15px;
+  flex-direction: column;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  background-color:#ff9494;
+  width: 10%;
+  transition: 0.2s ease;
+}
+.ellipsis-menu.active{
+  height: 100px;
+  width: 100px;
+}
+
+.ellipsis-menu div{
+  padding: 8%;
+}
+.ellipsis-menu div:hover{
+  background-color: antiquewhite;
+  border-radius: 8px;
+  cursor: pointer;
+}

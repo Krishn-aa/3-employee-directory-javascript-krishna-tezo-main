@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/addEmployee.css" />
+
+    <!-- Importing Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main-container" id="main-container">
+      <!-- Side Panel -->
+      <div class="side-panel">
+        <!-- Logo-->
+        <div class="side-panel-header">
+          <img src="../assets/tezo-logo.svg" class="logo-img" alt="tezo-logo" />
+        </div>
+
+        <div class="side-panel-content">
+          <!-- All -->
+          <div class="side-panel-section">
+            <div class="side-panel-heading">
+              ALL
+              <hr class="side-panel-bar" />
+            </div>
+
+            <div class="side-panel-section-selector">
+              <div class="side-panel-header-container active">
+                <div class="svg-container">
+                  <img
+                    src="../assets/horizontal-nav/dashboard-black.svg"
+                    alt=""
+                    class="svg-image svg-black"
+                  />
+                </div>
+                <p class="side-panel-title">Dashboard</p>
+              </div>
+            </div>
+
+            <div class="side-panel-section-selector">
+              <a href="../index.html">
+                <div class="side-panel-header-container active-selector">
+                  <div class="svg-container">
+                    <img
+                      src="../assets/horizontal-nav/employees-black.svg"
+                      alt=""
+                      class="svg-image svg-black"
+                    />
+                  </div>
+                  <p class="side-panel-title">Employees</p>
+
+                  <div class="pseudo-side-bar"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Roles -->
+          <div class="side-panel-section">
+            <div class="side-panel-heading">
+              <hr class="side-panel-bar" />
+              ROLE / USER MANAGEMENT
+            </div>
+            <div class="side-panel-section-selector">
+              <a href="roles.html">
+                <div class="side-panel-header-container">
+                  <div class="svg-container">
+                    <img
+                      src="../assets/horizontal-nav/roles-black.svg"
+                      alt=""
+                      class="svg-image svg-black"
+                    />
+                  </div>
+                  <p class="side-panel-title">Roles</p>
+                  <i
+                    class="fa-solid fa-chevron-right side-panel-logo-right"
+                  ></i>
+                </div>
+              </a>
+            </div>
+            
+            <div class="side-panel-section-selector">
+              <div class="side-panel-header-container">
+                <div class="svg-container">
+                  <img
+                    src="../assets/horizontal-nav/assign-user-black.svg"
+                    alt=""
+                    class="svg-image svg-black"
+                  />
+                </div>
+                <p class="side-panel-title">Access Rights</p>
+                <i class="fa-solid fa-chevron-right side-panel-logo-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Update -->
+        <div class="side-panel-update-box">
+          <p class="side-panel-update-box-heading">Install new update 2.3.1A</p>
+          <p class="side-panel-update-box-desc">
+            Allow to launch the new update for the AD application
+          </p>
+          <div class="side-panel-update-box-btn-container">
+            <button class="update-btn dismiss">Dismiss</button>
+            <button class="update-btn accept">Accept</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MainPanel -->
+      <div class="main-panel">
+        <img
+          src="../assets/handle.png"
+          class="side-panel-collapse-btn"
+          alt="collapse btn"
+          onclick="sidePanelToggle()"
+        />
+        <!-- Search Header -->
+        <div class="header-search">
+          <div class="header-search-section flex">
+            <img
+              src="../assets/bx-search.png"
+              class="header-search-search-icon"
+              alt="search"
+            />
+            <input
+              type="text"
+              class="header-search-box"
+              placeholder="Search (Ctrl+/)"
+            />
+          </div>
+          <div class="header-search-icons flex">
+            <img src="../assets/vertical-nav/language.svg" alt="lang" />
+            <img src="../assets/vertical-nav/categories.svg" alt="category" />
+            <img src="../assets/vertical-nav/mode.svg" alt="darkmode" />
+            <img
+              src="../assets/vertical-nav/notifications.svg"
+              alt="notifications"
+            />
+            <div class="header-search-profile">
+              <img
+                src="../assets/profle-pic.png"
+                alt="profile-pic"
+                class="header-profile-img"
+              />
+
+              <div class="header-search-profile-desc">
+                <p class="header-profile-name">John Abraham</p>
+                <p class="header-profile-admin">Admin</p>
+              </div>
+
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add Eployee -->
+        <div class="add-employee-container">
+          <h1>Add Employee</h1>
+          <form id="employeeForm" class="employee-form">
+            <div class="profile-image-container flex" id="profileImageContainer">
+              <div class="default-profile-photo flex">
+                <img
+                  src="../assets/user-profile.png"
+                  alt="Default User Image"
+                  id="profileImagePreview"
+                />
+              </div>
+              <label for="uploadPicture" class="upload-profile-pic-btn">
+                Upload Profile Picture
+              </label>
+              <input
+                type="file"
+                id="uploadPicture"
+                name="profileImage"
+                accept="image/*"
+                onchange=""
+                />
+            </div>
+            <div class="employee-detail-form">
+              <div class="employee-form-profile-details">
+                <div class="personal-information-container">
+                  <h2>Personal Information</h2>
+                  <div class="personal-information">
+                    <div class="flex">
+                      <div class="input-field-container">
+                        <label for="empNo">Emp No</label>
+                        <input
+                          type="text"
+                          id="empNo"
+                          name="empNo"
+                          placeholder="Text"
+                        />
+                        <span class="error-message"></span>
+                      </div>
+                    </div>
+
+                    <div class="flex">
+                      <div class="input-field-container">
+                        <label for="firstName">First Name</label>
+                        <input
+                          
+                          type="text"
+                          id="firstName"
+                          name="firstName"
+                          placeholder="Text"
+                          />
+                          <span class="error-message"></span>
+                        </div>
+                        <div class="input-field-container">
+                          <label for="lastName">Last Name</label>
+                          <input
+                          
+                          type="text"
+                          id="lastName"
+                          name="lastName"
+                          placeholder="Text"
+                          
+                          />
+                          <span class="error-message"></span>
+                        </div>
+                      <div class="input-field-container">
+                        <label for="dob">Date of Birth</label>
+                        <input
+                        placeholder="Select"
+                        type="date"
+                        id="dob"
+                        name="dob"
+                        class="date-input"
+                        />
+                      </div>
+                    </div>
+                    <div class="flex">
+                      <div class="input-field-container">
+                        <label for="email">Email Id</label>
+                        <input
+                        
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Joe.j@Technover.com"
+                        
+                        />
+                        <span class="error-message"></span>
+                      </div>
+                      <div class="input-field-container">
+                        <label for="mobNumber">Mobile Number</label>
+                        <input
+                          type="text"
+                          id="mobNumber"
+                          name="mobNumber"
+                          placeholder="0000000000"
+                          title="pls input only numbers"
+                        />
+                        <span class="error-message"></span>
+                        
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="employment-information-container">
+                  <h2>Employment Information</h2>
+                  <div class="employment-information">
+                    <div class="flex">
+                      <div class="input-field-container">
+                        <label for="joinDate"> Joining Date</label>
+                        <input
+                          
+                          type="date"
+                          id="joinDate"
+                          name="joinDate"
+                        />
+                        <span class="error-message"></span>
+                      </div>
+                      <div class="input-field-container">
+                        <label for="location">Location</label>
+                        <select id="location" name="location">
+                          <option value="">Search</option>
+                          <option value="Hyderabad">Hyderabad</option>
+                          <option value="Bangalore">Bangalore</option>
+                        </select>
+                        <span class="error-message"></span>
+                      </div>
+                    </div>
+                    <div class="flex">
+                      <div class="input-field-container">
+                        <label for="roleName">Job Title</label>
+                        <select id="roleName" name="roleName">
+                          <option value="search">Search</option>
+                          <option value="Full Stack Developer"> Full Stack Developer </option>
+                          <option value="Backend Developer">Backend Developer</option>
+                          <option value="Talent Acquisition">Talent Acquisition</option>
+                          <option value="Finance Manager">Finance Manager</option>
+                          <option value="Reporting Executive">Reporting Manager</option>
+                        </select>
+                        <span class="error-message"></span>
+                      </div>
+                      <div class="input-field-container">
+                        <label for="department">Department</label>
+                        <select id="department" name="department">
+
+                          <option value="search">Search</option>
+                          <option value="Product Engg">Product Engg</option>
+                          <option value="UI/UX">UI/UX</option>
+                          <option value="IT">IT</option>
+                          <option value="Finance">Finance</option>
+                        </select>
+                        <span class="error-message"></span>
+                      </div>
+                    </div>
+
+                    <div class="flex">
+                      <div class="input-field-container">
+                        <label for="managerName">Assign Manager</label>
+                        <select id="managerName" name="managerName">
+                          <option value="" hidden>Search</option>
+                          <option value="Manager1">Manager 1</option>
+                          <option value="Manager2">
+                            Manager 2
+                          </option>
+                          <option value="Manager3">
+                            Manager 3
+                          </option>
+                          <option value="Manager4">
+                            Manager 4
+                          </option>
+                        </select>
+                        <span class="error-message"></span>
+                      </div>
+                      <div class="input-field-container">
+                        <label for="projectName">Assign Project</label>
+                        <select id="projectName" name="projectName">
+                          <option value="" hidden>Search</option>
+                          <option value="Project1">Project 1</option>
+                          <option value="Project2">
+                            Project2
+                          </option>
+                          
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-buttons">
+                    <button type="cancel" onclick="cancelAddEmployee()">Cancel</button>
+                    <button id="submit-button" type="submit">
+                      Add Employee
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../script/helper.js"></script>
+    <script src="../script/sidepanel.js"></script>
+    <script src="../script/addEmployee.js"></script>
+  </body>
+</html>

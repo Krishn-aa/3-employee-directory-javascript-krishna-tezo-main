@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/employee.css" />
+
+    <!-- Importing Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="main-container" id="main-container">
+      <!-- Side Panel -->
+      <div class="side-panel">
+        <!-- Logo-->
+        <div class="side-panel-header">
+          <img src="assets/tezo-logo.svg" class="logo-img" alt="tezo-logo" />
+        </div>
+
+        <div class="side-panel-content">
+          <!-- All -->
+          <div class="side-panel-section">
+            <div class="side-panel-heading">
+              ALL
+              <hr class="side-panel-bar" />
+            </div>
+
+            <div class="side-panel-section-selector">
+              <div class="side-panel-header-container active">
+                <div class="svg-container">
+                  <img
+                    src="assets/horizontal-nav/dashboard-black.svg"
+                    alt=""
+                    class="svg-image svg-black"
+                  />
+                </div>
+                <p class="side-panel-title">Dashboard</p>
+              </div>
+            </div>
+
+            <div class="side-panel-section-selector">
+              <a href="index.html">
+                <div class="side-panel-header-container side-panel-active-selector">
+                  <div class="svg-container">
+                    <img
+                      src="assets/horizontal-nav/employees-red.svg"
+                      alt=""
+                      class="svg-image svg-black"
+                    />
+                  </div>
+                  <p class="side-panel-title">Employees</p>
+
+                  <div class="pseudo-side-bar"></div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- Roles -->
+          <div class="side-panel-section">
+            <div class="side-panel-heading">
+              <hr class="side-panel-bar" />
+              ROLE / USER MANAGEMENT
+            </div>
+            <div class="side-panel-section-selector">
+              <a href="html/roles.html">
+                <div class="side-panel-header-container">
+                  <div class="svg-container">
+                    <img
+                      src="assets/horizontal-nav/roles-black.svg"
+                      alt=""
+                      class="svg-image svg-black"
+                    />
+                  </div>
+                  <p class="side-panel-title">Roles</p>
+                  <i
+                    class="fa-solid fa-chevron-right side-panel-logo-right"
+                  ></i>
+                </div>
+              </a>
+            </div>
+
+            <div class="side-panel-section-selector">
+              <div class="side-panel-header-container">
+                <div class="svg-container">
+                  <img
+                    src="assets/horizontal-nav/assign-user-black.svg"
+                    alt=""
+                    class="svg-image svg-black"
+                  />
+                </div>
+                <p class="side-panel-title">Access Rights</p>
+                <i class="fa-solid fa-chevron-right side-panel-logo-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Update -->
+        <div class="side-panel-update-box">
+          <p class="side-panel-update-box-heading">Install new update 2.3.1A</p>
+          <p class="side-panel-update-box-desc">
+            Allow to launch the new update for the AD application
+          </p>
+          <div class="side-panel-update-box-btn-container">
+            <button class="update-btn dismiss">Dismiss</button>
+            <button class="update-btn accept">Accept</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- MainPanel -->
+      <div class="main-panel">
+        <img
+          src="assets/handle.png"
+          class="side-panel-collapse-btn"
+          alt="collapse btn"
+          onclick="sidePanelToggle()"
+        />
+        <!-- Search Header -->
+        <div class="header-search">
+          <div class="header-search-section flex">
+            <img
+              src="assets/bx-search.png"
+              class="header-search-search-icon"
+              alt="search"
+            />
+            <input
+              type="text"
+              id="searchbar"
+              class="header-search-box"
+              placeholder="Search (Ctrl+/)"
+              onkeyup="searchEmployee()"
+            />
+          </div>
+          <div class="header-search-icons flex">
+            <img src="assets/vertical-nav/language.svg" alt="lang" />
+            <img src="assets/vertical-nav/categories.svg" alt="category" />
+            <img src="assets/vertical-nav/mode.svg" alt="darkmode" />
+            <img
+              src="assets/vertical-nav/notifications.svg"
+              alt="notifications"
+            />
+            <div class="header-search-profile">
+              <img
+                src="assets/profle-pic.png"
+                alt="profile-pic"
+                class="header-profile-img"
+              />
+
+              <div class="header-search-profile-desc">
+                <p class="header-profile-name">John Abraham</p>
+                <p class="header-profile-admin">Admin</p>
+              </div>
+
+              <i class="fa-solid fa-chevron-right"></i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Employees Header -->
+        <div class="page-header">
+          <div class="page-header-content">
+            <div class="page-header-content-title">Employees</div>
+            <div class="page-header-content-desc">
+              Find all your company's employee accounts and their assoiciated
+              roles.
+            </div>
+          </div>
+          <button class="page-header-btn-export" onclick="exportToCSV()">
+            <img src="assets/interface/export.svg" alt="export" />
+            <p>EXPORT</p>
+          </button>
+          <button class="page-header-btn-add-employee" onclick="handleAddEmployee()">
+            <img src="assets/interface/add.svg" alt="" />
+            <p>ADD EMPLOYEE</p>
+          </button>
+        </div>
+
+        <!-- Filter Alphabets-->
+    <div class="filter">
+      <img
+        src="assets/interface/filter.svg"
+        class="remove-filter-btn"
+        alt="filter"
+        onclick="resetAlphabetFilter()"
+      />
+      <div class="filter-alphabets flex"></div>
+    </div>
+
+    <!-- Filters -->
+    <div class="filter-options flex">
+      <div class="filter-columns flex">
+        <div><p class="filter-options-title">Filter</p></div>
+        <img src="assets/filter-sort.png" alt="" />
+
+        <div class="filter-option-container">
+          <div class="placeholder" onclick="showFilterDropdown(this)">
+            <div class="filter-options-btn">
+              <p class="status">Status</p>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="drop-down-menu status" onclick="manageFilterSelection(this)">Active</div>
+            <div class="drop-down-menu status" onclick="manageFilterSelection(this)">Inactive</div>
+          </div>
+        </div>
+
+        <div class="filter-option-container">
+          <div class="placeholder" onclick="showFilterDropdown(this)">
+            <div class="filter-options-btn">
+              <p class="location">Location</p> 
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="drop-down-menu location" onclick="manageFilterSelection(this)">Bangalore</div>
+            <div class="drop-down-menu location" onclick="manageFilterSelection(this)">Hyderabad</div>
+          </div>
+        </div>
+
+        <div class="filter-option-container">
+          <div class="placeholder" onclick="showFilterDropdown(this)">
+            <div class="filter-options-btn">
+              <p class="department">Department</p> 
+              <i class="fa-solid fa-angle-down"></i></div>
+          </div>
+          <div class="dropdown">
+            <div class="drop-down-menu department" onclick="manageFilterSelection(this)">Product Engg</div>
+            <div class="drop-down-menu department" onclick="manageFilterSelection(this)">HR</div>
+            <div class="drop-down-menu department" onclick="manageFilterSelection(this)">UI/UX</div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button
+          class="filter-options-btn filter-options-reset"
+          onclick="resetFilter()"
+        >
+          Reset
+        </button>
+        <button
+          class="filter-options-btn filter-options-apply"
+          onclick="applyFilter()"
+        >
+          Apply
+        </button>
+      </div>
+    </div>
+
+        <!-- Employee Table -->
+        <div class="employee-table-section">
+          <div class="employee-table-section-header flex">
+            <div class="employee-table-section-header-del flex">
+              <img
+                src="assets/interface/arrow-turn-left-down.svg"
+                alt="arrow-turn-left-down"
+              />
+              <button class="btn-delete" onclick="deleteEmployees()">Delete</button>
+            </div>
+
+            <div class="employee-table-section-header-table-add">
+              <img src="assets/table-add.png" alt="table-add" />
+            </div>
+          </div>
+          <div class="employee-rows-section">
+            <table class="employee-table">
+              <thead>
+                <tr class="employee-table-row employee-table-row-heading">
+                  <th><label><input type="checkbox" name="check" id="check-box" class="row-checkbox first-checkbox" onchange="manageSelectedEmployees(this,undefined)"/></label></th>
+                  <th onclick="handleColumnSort('user')">USER <i class="fa-solid fa-sort sort-btn" ></i></th>
+                  <th onclick="handleColumnSort('location')">LOCATION <i class="fa-solid fa-sort sort-btn " ></i></th>
+                  <th onclick="handleColumnSort('department')">DEPARTMENT <i class="fa-solid fa-sort sort-btn " ></i></th>
+                  <th onclick="handleColumnSort('role')">ROLE <i class="fa-solid fa-sort sort-btn " ></i></th>
+                  <th onclick="handleColumnSort('emp-no')">EMP NO <i class="fa-solid fa-sort sort-btn" ></i></th>
+                  <th onclick="handleColumnSort('status')">STATUS <i class="fa-solid fa-sort sort-btn" ></i></th>
+                  <th onclick="handleColumnSort('join-date')">JOIN DT <i class="fa-solid fa-sort sort-btn" ></i></th>
+                  <th>...</th>
+                </tr>
+              </thead>
+
+              <tbody class="employee-table-data">
+                
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script/helper.js"></script>
+    <script src="index.js"></script>
+    <script src="script/sidepanel.js"></script>
+    
+  </body>
+</html>
+ 
